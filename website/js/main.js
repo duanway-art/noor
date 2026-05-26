@@ -193,20 +193,12 @@
     return slash >= 0 ? path.slice(0, slash + 1) : "/";
   }
 
-  function legalPageUrl(doc) {
-    const locale = localStorage.getItem(STORAGE_KEY) || "en";
-    const legalDir = (window.NOOR_SITE?.legalBase || "legal").replace(/^\/+|\/+$/g, "");
-    const root = siteRoot();
-    const prefix = `${root}${legalDir}`;
-    const localized = `${prefix}/${locale}/${doc}`;
-    return localized;
-  }
-
   function setupLegalLinks() {
+    const root = siteRoot();
     const privacy = document.getElementById("footer-privacy");
     const terms = document.getElementById("footer-terms");
-    if (privacy) privacy.href = legalPageUrl("privacy.html");
-    if (terms) terms.href = legalPageUrl("terms.html");
+    if (privacy) privacy.href = `${root}privacy.html`;
+    if (terms) terms.href = `${root}terms.html`;
   }
 
   function setupNav() {

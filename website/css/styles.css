@@ -575,6 +575,88 @@ body.wechat-guide-open {
   overflow: hidden;
 }
 
+/* Legal pages (privacy / terms) */
+.legal-page {
+  padding: 2rem 0 4rem;
+  background: var(--background);
+  min-height: 60vh;
+}
+
+.legal-back {
+  display: inline-block;
+  margin-bottom: 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--secondary);
+  text-decoration: none;
+}
+
+.legal-back:hover {
+  text-decoration: underline;
+}
+
+.legal-document {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 2rem 1.75rem;
+  background: var(--surface-low);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 8px 24px var(--shadow);
+}
+
+.legal-document h1 {
+  font-family: var(--font-headline);
+  font-size: 1.75rem;
+  color: var(--primary);
+  margin: 0 0 0.35rem;
+}
+
+.legal-document h2 {
+  font-family: var(--font-headline);
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin: 1.6em 0 0.5em;
+}
+
+.legal-document p,
+.legal-document li {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--on-background);
+}
+
+.legal-document .muted {
+  color: var(--on-surface-variant);
+  font-size: 0.88rem;
+  margin-bottom: 1.25rem;
+}
+
+.legal-document ul {
+  padding-left: 1.25rem;
+  margin: 0.5em 0 1em;
+}
+
+[dir="rtl"] .legal-document ul {
+  padding-right: 1.25rem;
+  padding-left: 0;
+}
+
+.legal-loading,
+.legal-error {
+  text-align: center;
+  color: var(--on-surface-variant);
+  padding: 2rem 0;
+}
+
+.site-footer--compact {
+  padding: 1.75rem 0;
+}
+
+.site-footer--compact .footer-tagline,
+.site-footer--compact .footer-made {
+  display: none;
+}
+
 /* Footer */
 .site-footer {
   padding: 2.5rem 0;

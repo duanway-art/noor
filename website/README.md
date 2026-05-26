@@ -4,15 +4,19 @@ Static marketing site for **Noor Pro** ([App Store](https://apps.apple.com/us/ap
 
 ## Preview locally
 
-The site expects a `legal/` folder next to `index.html` (same layout as GitHub Pages). One-time setup:
+**Do not** open `index.html` by double-clicking (`file://` will break links and legal pages). Use a local web server:
 
 ```bash
-cd website
-ln -sf ../docs/legal legal
-python3 -m http.server 8080
+bash scripts/preview-website.sh
 ```
 
-Open [http://localhost:8080](http://localhost:8080).
+Then open in your browser:
+
+- http://127.0.0.1:8080/
+- http://127.0.0.1:8080/privacy.html
+- http://127.0.0.1:8080/terms.html
+
+Optional port: `bash scripts/preview-website.sh 8888`
 
 ## GitHub Pages deployment
 
@@ -29,7 +33,7 @@ It publishes:
 
 | Host | Site | Privacy (en) |
 |------|------|----------------|
-| GitHub Pages | https://duanway-art.github.io/noor/ | https://duanway-art.github.io/noor/legal/en/privacy.html |
+| GitHub Pages | https://duanway-art.github.io/noor/ | https://duanway-art.github.io/noor/privacy.html |
 | Cloudflare | Your `*.pages.dev` or custom domain | `/legal/en/privacy.html` on same host |
 
 ### One-time setup in GitHub
@@ -56,8 +60,8 @@ In **Settings → Pages**, set a custom domain (e.g. `noor.app`) and add the DNS
 After Pages is live, you can point the iOS app to hosted legal pages in `QuranApp/LegalURLs.swift`, for example:
 
 ```swift
-static let privacyPolicyWeb: URL? = URL(string: "https://duanway-art.github.io/noor/legal/en/privacy.html")
-static let termsOfUseWeb: URL? = URL(string: "https://duanway-art.github.io/noor/legal/en/terms.html")
+static let privacyPolicyWeb: URL? = URL(string: "https://duanway-art.github.io/noor/privacy.html")
+static let termsOfUseWeb: URL? = URL(string: "https://duanway-art.github.io/noor/terms.html")
 ```
 
 ### Cloudflare Pages (`wrangler.jsonc`)
@@ -78,6 +82,9 @@ In the Cloudflare dashboard → your project → **Build command**, set:
 | Path | Purpose |
 |------|---------|
 | `index.html` | Landing page |
+| `privacy.html` | Privacy policy (site chrome + localized body) |
+| `terms.html` | Terms of use (site chrome + localized body) |
+| `js/legal-page.js` | Loads `legal/<locale>/` HTML into legal pages |
 | `css/styles.css` | Sacred Sanctuary theme |
 | `js/i18n.js` | Copy for 10 locales |
 | `js/main.js` | Language switcher, RTL, links |
