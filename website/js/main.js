@@ -185,14 +185,28 @@
     }
   }
 
-  function setupLegalLinks() {
-    const base = window.NOOR_SITE?.legalBase || "../docs/legal";
+  /** Site root with trailing slash (supports GitHub Pages project URLs). */
+  function siteRoot() {
+    const path = window.location.pathname;
+    if (path.endsWith("/")) return path;
+    const slash = path.lastIndexOf("/");
+    return slash >= 0 ? path.slice(0, slash + 1) : "/";
+  }
+
+  function legalPageUrl(doc) {
     const locale = localStorage.getItem(STORAGE_KEY) || "en";
+    const legalDir = (window.NOOR_SITE?.legalBase || "legal").replace(/^\/+|\/+$/g, "");
+    const root = siteRoot();
+    const prefix = `${root}${legalDir}`;
+    const localized = `${prefix}/${locale}/${doc}`;
+    return localized;
+  }
+
+  function setupLegalLinks() {
     const privacy = document.getElementById("footer-privacy");
     const terms = document.getElementById("footer-terms");
-    const folder = locale === "zh-Hans" || locale === "zh-Hant" ? locale : locale;
-    if (privacy) privacy.href = `${base}/${folder}/privacy.html`;
-    if (terms) terms.href = `${base}/${folder}/terms.html`;
+    if (privacy) privacy.href = legalPageUrl("privacy.html");
+    if (terms) terms.href = legalPageUrl("terms.html");
   }
 
   function setupNav() {

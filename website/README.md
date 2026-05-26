@@ -23,6 +23,15 @@ It publishes:
 - `website/` → site root (`/`)
 - `docs/legal/` → `/legal/` (privacy & terms per locale)
 
+**Important:** `docs/legal/` must be committed to Git. Before Cloudflare deploy, run `bash scripts/build_website_for_deploy.sh` so `website/legal/` exists.
+
+### Live URLs ([duanway-art/noor](https://github.com/duanway-art/noor))
+
+| Host | Site | Privacy (en) |
+|------|------|----------------|
+| GitHub Pages | https://duanway-art.github.io/noor/ | https://duanway-art.github.io/noor/legal/en/privacy.html |
+| Cloudflare | Your `*.pages.dev` or custom domain | `/legal/en/privacy.html` on same host |
+
 ### One-time setup in GitHub
 
 1. Push this repository to GitHub.
@@ -47,9 +56,22 @@ In **Settings → Pages**, set a custom domain (e.g. `noor.app`) and add the DNS
 After Pages is live, you can point the iOS app to hosted legal pages in `QuranApp/LegalURLs.swift`, for example:
 
 ```swift
-static let privacyPolicyWeb: URL? = URL(string: "https://<username>.github.io/<repo>/legal/en/privacy.html")
-static let termsOfUseWeb: URL? = URL(string: "https://<username>.github.io/<repo>/legal/en/terms.html")
+static let privacyPolicyWeb: URL? = URL(string: "https://duanway-art.github.io/noor/legal/en/privacy.html")
+static let termsOfUseWeb: URL? = URL(string: "https://duanway-art.github.io/noor/legal/en/terms.html")
 ```
+
+### Cloudflare Pages (`wrangler.jsonc`)
+
+This repo is connected to [Cloudflare](https://developers.cloudflare.com/workers/static-assets/). Wrangler only uploads `website/`, so **run before deploy:**
+
+```bash
+bash scripts/build_website_for_deploy.sh
+npx wrangler deploy
+```
+
+In the Cloudflare dashboard → your project → **Build command**, set:
+
+`bash scripts/build_website_for_deploy.sh`
 
 ## Structure
 
