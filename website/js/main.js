@@ -77,6 +77,12 @@
     return window.NOOR_SITE?.appStoreUrl?.trim() || "";
   }
 
+  function googlePlayUrl() {
+    return window.NOOR_SITE?.googlePlayUrl?.trim() || "";
+  }
+
+  let wechatCopyTargetUrl = "";
+
   function copyText(text) {
     if (navigator.clipboard?.writeText) {
       return navigator.clipboard.writeText(text);
@@ -99,9 +105,10 @@
     });
   }
 
-  function showWeChatGuide() {
+  function showWeChatGuide(url) {
     const guide = document.getElementById("wechat-guide");
     if (!guide) return;
+    wechatCopyTargetUrl = url || appStoreUrl();
     guide.classList.remove("hidden");
     guide.hidden = false;
     document.body.classList.add("wechat-guide-open");
@@ -117,13 +124,16 @@
   }
 
   function setupWeChatDownload() {
-    const url = appStoreUrl();
-    if (!url || !isWeChatBrowser()) return;
+    if (!isWeChatBrowser()) return;
 
-    document.querySelectorAll("#hero-cta, #app-store-btn").forEach((el) => {
+    document.querySelectorAll("[data-store-download]").forEach((el) => {
       el.addEventListener("click", (event) => {
+        const store = el.getAttribute("data-store-download");
+        const url =
+          store === "google-play" ? googlePlayUrl() : appStoreUrl();
+        if (!url) return;
         event.preventDefault();
-        showWeChatGuide();
+        showWeChatGuide(url);
       });
     });
 
@@ -136,6 +146,7 @@
 
     document.getElementById("wechat-copy")?.addEventListener("click", () => {
       const toast = document.getElementById("wechat-copy-toast");
+      const url = wechatCopyTargetUrl || appStoreUrl();
       copyText(url)
         .then(() => {
           toast?.classList.remove("hidden");
@@ -152,34 +163,99 @@
     });
   }
 
+  function bindStoreButton(el, url, inWeChat, { comingSoon = false } = {}) {
+    if (!el) return;
+    el.classList.remove("is-coming-soon");
+    if (url) {
+      el.href = inWeChat ? "#download" : url;
+      el.removeAttribute("aria-disabled");
+      el.classList.remove("is-disabled");
+      if (inWeChat) {
+        el.setAttribute("role", "button");
+        el.setAttribute("aria-haspopup", "dialog");
+      } else {
+        el.removeAttribute("role");
+        el.removeAttribute("aria-haspopup");
+      }
+    } else if (comingSoon) {
+      el.href = "#";
+      el.removeAttribute("aria-disabled");
+      el.classList.remove("is-disabled");
+      el.classList.add("is-coming-soon");
+      el.setAttribute("role", "button");
+      el.setAttribute("aria-haspopup", "dialog");
+    } else {
+      el.href = "#download";
+      el.setAttribute("aria-disabled", "true");
+      el.classList.add("is-disabled");
+      el.classList.remove("is-coming-soon");
+      el.removeAttribute("role");
+      el.removeAttribute("aria-haspopup");
+    }
+  }
+
+  function showAndroidSoonDialog() {
+    const dialog = document.getElementById("android-soon-dialog");
+    if (!dialog) return;
+    dialog.classList.remove("hidden");
+    dialog.hidden = false;
+    document.body.classList.add("site-dialog-open");
+    dialog.querySelector("[data-android-soon-dismiss].btn")?.focus();
+  }
+
+  function hideAndroidSoonDialog() {
+    const dialog = document.getElementById("android-soon-dialog");
+    if (!dialog) return;
+    dialog.classList.add("hidden");
+    dialog.hidden = true;
+    document.body.classList.remove("site-dialog-open");
+  }
+
+  function setupAndroidSoonModal() {
+    if (googlePlayUrl()) return;
+
+    document.querySelectorAll('[data-store-download="google-play"]').forEach((el) => {
+      el.addEventListener("click", (event) => {
+        event.preventDefault();
+        showAndroidSoonDialog();
+      });
+    });
+
+    document
+      .getElementById("android-soon-dialog")
+      ?.querySelectorAll("[data-android-soon-dismiss]")
+      .forEach((el) => {
+        el.addEventListener("click", hideAndroidSoonDialog);
+      });
+  }
+
   function setupDownloadLinks() {
-    const url = appStoreUrl();
-    const cta = document.getElementById("hero-cta");
-    const storeBtn = document.getElementById("app-store-btn");
-    const comingSoon = document.getElementById("download-coming-soon");
+    const iosUrl = appStoreUrl();
+    const androidUrl = googlePlayUrl();
     const inWeChat = isWeChatBrowser();
 
-    if (url) {
-      [cta, storeBtn].forEach((el) => {
-        if (!el) return;
-        el.href = inWeChat ? "#" : url;
-        el.removeAttribute("aria-disabled");
-        el.classList.remove("is-disabled");
-        if (inWeChat) {
-          el.setAttribute("role", "button");
-          el.setAttribute("aria-haspopup", "dialog");
-        }
-      });
-      comingSoon?.classList.add("hidden");
-    } else {
-      [cta, storeBtn].forEach((el) => {
-        if (!el) return;
-        el.href = "#download";
-        el.setAttribute("aria-disabled", "true");
-        el.classList.add("is-disabled");
-      });
-      comingSoon?.classList.remove("hidden");
-    }
+    bindStoreButton(document.getElementById("hero-cta-ios"), iosUrl, inWeChat);
+    const androidComingSoon = !androidUrl;
+    bindStoreButton(
+      document.getElementById("hero-cta-android"),
+      androidUrl,
+      inWeChat,
+      { comingSoon: androidComingSoon }
+    );
+    bindStoreButton(document.getElementById("app-store-btn"), iosUrl, inWeChat);
+    bindStoreButton(
+      document.getElementById("google-play-btn"),
+      androidUrl,
+      inWeChat,
+      { comingSoon: androidComingSoon }
+    );
+
+    document
+      .getElementById("download-coming-soon-ios")
+      ?.classList.toggle("hidden", Boolean(iosUrl));
+    document
+      .getElementById("download-coming-soon-android")
+      ?.classList.toggle("hidden", Boolean(androidUrl));
   }
 
   /** Site root with trailing slash (supports GitHub Pages project URLs). */
@@ -215,6 +291,7 @@
   setupLanguageSwitcher(locale);
   applyTranslations(locale);
   setupDownloadLinks();
+  setupAndroidSoonModal();
   setupWeChatDownload();
   setupLegalLinks();
   setupNav();

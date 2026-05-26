@@ -230,9 +230,39 @@ a:hover {
 
 .hero-cta-group {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.hero-store-buttons {
+  display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  gap: 1rem;
+  gap: 0.65rem;
+  width: 100%;
+}
+
+.btn-store {
+  justify-content: center;
+  text-align: center;
+  flex: 1 1 11rem;
+  min-width: min(100%, 11rem);
+}
+
+.hero-store-buttons .btn-store--play {
+  background: #fff;
+  color: var(--on-background);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  border: 1px solid color-mix(in srgb, white 50%, transparent);
+}
+
+.hero-store-buttons .btn-store--play:hover {
+  background: #fff;
+  filter: brightness(0.98);
+}
+
+.hero-store-buttons .btn-store--play.is-disabled {
+  opacity: 0.88;
 }
 
 .btn {
@@ -417,7 +447,7 @@ section {
 }
 
 .download-card {
-  max-width: 32rem;
+  max-width: 38rem;
   margin: 0 auto;
   padding: 2.5rem;
   background: var(--primary);
@@ -437,46 +467,104 @@ section {
   margin-bottom: 1.75rem;
 }
 
-.download-coming-soon {
-  font-size: 0.9rem;
-  color: var(--secondary-container);
-  margin-top: 1rem;
-  font-weight: 500;
-}
-
 .download-coming-soon.hidden {
   display: none;
 }
 
-.download-watch {
-  display: block;
-  margin-top: 1rem;
-  font-size: 0.85rem;
-  color: var(--on-primary-container);
-  opacity: 0.85;
+.store-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.app-store-badge {
-  display: inline-flex;
+.store-badge-row,
+.store-badge-notes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  align-items: stretch;
+}
+
+.store-badge-row .store-badge {
+  width: 100%;
+  height: 100%;
+  min-height: 3.25rem;
+  box-sizing: border-box;
+}
+
+.store-badge-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.store-badge-note {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: var(--on-primary-container);
+  opacity: 0.9;
+  text-align: center;
+  max-width: 14rem;
+}
+
+.store-badge-note.download-coming-soon {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--secondary-container);
+  opacity: 1;
+}
+
+.store-badge {
+  display: flex;
   align-items: center;
   gap: 0.65rem;
   background: #000;
   color: #fff;
-  padding: 0.65rem 1.25rem;
+  padding: 0.65rem 1rem;
   border-radius: 0.75rem;
   font-weight: 500;
+  font-size: 0.9rem;
+  line-height: 1.35;
   text-decoration: none;
+  justify-content: center;
 }
 
-.app-store-badge:hover {
+.store-badge span {
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+}
+
+.store-badge:hover {
   text-decoration: none;
   opacity: 0.92;
 }
 
-.app-store-badge svg {
+.store-badge.is-disabled {
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.store-badge svg {
   width: 28px;
   height: 28px;
   flex-shrink: 0;
+}
+
+.store-badge--apple,
+.store-badge--google,
+#app-store-btn,
+#google-play-btn {
+  background: #000;
+  color: #fff;
+}
+
+.store-badge--apple.is-disabled,
+.store-badge--google.is-disabled {
+  background: #000;
+  color: #fff;
 }
 
 /* WeChat in-app browser: App Store links are blocked */
@@ -571,8 +659,20 @@ section {
   display: none;
 }
 
-body.wechat-guide-open {
+body.wechat-guide-open,
+body.site-dialog-open {
   overflow: hidden;
+}
+
+.wechat-guide.site-dialog--centered {
+  align-items: center;
+  padding-top: 1.25rem;
+}
+
+.store-badge.is-coming-soon,
+.hero-store-buttons .btn-store--play.is-coming-soon {
+  opacity: 0.88;
+  cursor: pointer;
 }
 
 /* Legal pages (privacy / terms) */
@@ -708,6 +808,10 @@ body.wechat-guide-open {
   }
 
   .hero-cta-group {
+    align-items: center;
+  }
+
+  .hero-store-buttons {
     justify-content: center;
   }
 

@@ -55,7 +55,7 @@ In **Settings → Pages**, set a custom domain (e.g. `noor.app`) and add the DNS
 
 | File | Purpose |
 |------|---------|
-| `js/config.js` | `appStoreUrl`, `legalBase` (`legal` on Pages) |
+| `js/config.js` | `appStoreUrl`, `googlePlayUrl`, `legalBase` (`legal` on Pages) |
 
 After Pages is live, you can point the iOS app to hosted legal pages in `QuranApp/LegalURLs.swift`, for example:
 
