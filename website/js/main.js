@@ -72,18 +72,106 @@
     select.addEventListener("change", () => applyTranslations(select.value));
   }
 
+  function isWeChatBrowser() {
+    return /MicroMessenger/i.test(navigator.userAgent || "");
+  }
+
+  function appStoreUrl() {
+    return window.NOOR_SITE?.appStoreUrl?.trim() || "";
+  }
+
+  function copyText(text) {
+    if (navigator.clipboard?.writeText) {
+      return navigator.clipboard.writeText(text);
+    }
+    return new Promise((resolve, reject) => {
+      const input = document.createElement("textarea");
+      input.value = text;
+      input.setAttribute("readonly", "");
+      input.style.position = "fixed";
+      input.style.left = "-9999px";
+      document.body.appendChild(input);
+      input.select();
+      try {
+        document.execCommand("copy") ? resolve() : reject();
+      } catch (err) {
+        reject(err);
+      } finally {
+        document.body.removeChild(input);
+      }
+    });
+  }
+
+  function showWeChatGuide() {
+    const guide = document.getElementById("wechat-guide");
+    if (!guide) return;
+    guide.classList.remove("hidden");
+    guide.hidden = false;
+    document.body.classList.add("wechat-guide-open");
+    document.getElementById("wechat-copy-toast")?.classList.add("hidden");
+  }
+
+  function hideWeChatGuide() {
+    const guide = document.getElementById("wechat-guide");
+    if (!guide) return;
+    guide.classList.add("hidden");
+    guide.hidden = true;
+    document.body.classList.remove("wechat-guide-open");
+  }
+
+  function setupWeChatDownload() {
+    const url = appStoreUrl();
+    if (!url || !isWeChatBrowser()) return;
+
+    document.querySelectorAll("#hero-cta, #app-store-btn").forEach((el) => {
+      el.addEventListener("click", (event) => {
+        event.preventDefault();
+        showWeChatGuide();
+      });
+    });
+
+    document
+      .getElementById("wechat-guide")
+      ?.querySelectorAll("[data-wechat-dismiss]")
+      .forEach((el) => {
+        el.addEventListener("click", hideWeChatGuide);
+      });
+
+    document.getElementById("wechat-copy")?.addEventListener("click", () => {
+      const toast = document.getElementById("wechat-copy-toast");
+      copyText(url)
+        .then(() => {
+          toast?.classList.remove("hidden");
+          window.setTimeout(() => toast?.classList.add("hidden"), 2400);
+        })
+        .catch(() => {
+          window.prompt(
+            document.documentElement.lang.startsWith("zh")
+              ? "请长按复制此链接："
+              : "Copy this link:",
+            url
+          );
+        });
+    });
+  }
+
   function setupDownloadLinks() {
-    const url = window.NOOR_SITE?.appStoreUrl?.trim();
+    const url = appStoreUrl();
     const cta = document.getElementById("hero-cta");
     const storeBtn = document.getElementById("app-store-btn");
     const comingSoon = document.getElementById("download-coming-soon");
+    const inWeChat = isWeChatBrowser();
 
     if (url) {
       [cta, storeBtn].forEach((el) => {
         if (!el) return;
-        el.href = url;
+        el.href = inWeChat ? "#" : url;
         el.removeAttribute("aria-disabled");
         el.classList.remove("is-disabled");
+        if (inWeChat) {
+          el.setAttribute("role", "button");
+          el.setAttribute("aria-haspopup", "dialog");
+        }
       });
       comingSoon?.classList.add("hidden");
     } else {
@@ -124,6 +212,7 @@
   setupLanguageSwitcher(locale);
   applyTranslations(locale);
   setupDownloadLinks();
+  setupWeChatDownload();
   setupLegalLinks();
   setupNav();
 

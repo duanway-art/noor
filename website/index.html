@@ -302,6 +302,34 @@
       </div>
     </footer>
 
+    <div id="wechat-guide" class="wechat-guide hidden" role="dialog" aria-modal="true" hidden>
+      <div class="wechat-guide__backdrop" data-wechat-dismiss></div>
+      <div class="wechat-guide__panel">
+        <div class="wechat-guide__arrow" aria-hidden="true"></div>
+        <h2 class="wechat-guide__title" data-i18n="wechat.title">Open in your browser</h2>
+        <p class="wechat-guide__body" data-i18n="wechat.body">
+          WeChat cannot open the App Store directly. Tap ··· at the top right, choose
+          “Open in Browser”, then download Noor from the App Store.
+        </p>
+        <div class="wechat-guide__actions">
+          <button type="button" class="btn btn-primary" id="wechat-copy" data-i18n="wechat.copy">
+            Copy App Store link
+          </button>
+          <button
+            type="button"
+            class="btn wechat-guide__dismiss"
+            data-wechat-dismiss
+            data-i18n="wechat.dismiss"
+          >
+            OK
+          </button>
+        </div>
+        <p id="wechat-copy-toast" class="wechat-guide__toast hidden" data-i18n="wechat.copied">
+          Link copied
+        </p>
+      </div>
+    </div>
+
     <style>
       .visually-hidden {
         position: absolute;
