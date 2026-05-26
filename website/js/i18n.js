@@ -1,0 +1,649 @@
+/**
+ * Noor marketing site — 10 UI locales (default: en).
+ */
+window.NoorI18n = {
+  _localeNames: {
+    en: "English",
+    ar: "العربية",
+    "zh-Hans": "简体中文",
+    "zh-Hant": "繁體中文",
+    id: "Bahasa Indonesia",
+    ms: "Bahasa Melayu",
+    tr: "Türkçe",
+    ur: "اردو",
+    hi: "हिन्दी",
+    bn: "বাংলা",
+  },
+
+  en: {
+    "meta.title": "Noor — Quran, Prayer Times & Qibla",
+    "meta.description":
+      "Noor is a beautiful spiritual companion for reading the Quran, daily prayer times, and Qibla direction — private, on-device, in 10 languages.",
+    "nav.features": "Features",
+    "nav.highlights": "Why Noor",
+    "nav.download": "Download",
+    "nav.privacy": "Privacy",
+    "nav.terms": "Terms",
+    "hero.badge": "Sacred Sanctuary",
+    "hero.title": "Light for your daily worship",
+    "hero.subtitle":
+      "Read the Quran with translations, follow accurate prayer times, and find Qibla — all in one calm, editorial experience designed for reflection.",
+    "hero.cta": "Download on the App Store",
+    "hero.cta_note": "Free · iPhone & Apple Watch",
+    "hero.screenshots_alt":
+      "Noor app screenshots: Quran index, prayer times, Quran reader, and Qibla compass",
+    "features.title": "Everything for daily worship",
+    "features.subtitle":
+      "Four thoughtful spaces — Quran, Prayer, Qibla, and Settings — crafted with the Noor Essence design system.",
+    "feature.quran.title": "Quran Reader",
+    "feature.quran.desc":
+      "Browse by Surah or Juz. Arabic with translation in your language, resume reading, on-device search, and listen with read-aloud.",
+    "feature.prayer.title": "Prayer Times",
+    "feature.prayer.desc":
+      "Five daily salat computed locally from your location, with next-prayer countdown, Hijri date, and optional reminders.",
+    "feature.qibla.title": "Qibla Compass",
+    "feature.qibla.desc":
+      "Glass-style compass toward Makkah with turn guidance, alignment feedback, distance, and calibration hints.",
+    "feature.widget.title": "Home Screen Widgets",
+    "feature.widget.desc":
+      "Next Prayer countdown and Ayah of the Day on your Home Screen — tap to open the verse in the app.",
+    "feature.watch.title": "Apple Watch",
+    "feature.watch.desc":
+      "Quran, prayer times, and Qibla on your wrist — stay connected without reaching for your phone.",
+    "feature.privacy.title": "Private by design",
+    "feature.privacy.desc":
+      "Quran text and search stay on your device. No ads. No third-party analytics in the current version.",
+    "highlights.title": "Why Muslims choose Noor",
+    "highlight.languages.title": "10 languages",
+    "highlight.languages.desc":
+      "UI and Quran translations in English, Arabic, Chinese (Simplified & Traditional), Indonesian, Malay, Turkish, Urdu, Hindi, and Bengali.",
+    "highlight.ayah.title": "Ayah of the Day",
+    "highlight.ayah.desc":
+      "One meaningful verse each day — synced between the app and your widget.",
+    "highlight.design.title": "Sacred Sanctuary design",
+    "highlight.design.desc":
+      "Warm cream surfaces, deep emerald, and gold accents — editorial calm inspired by mosque architecture.",
+    "highlight.local.title": "Works offline",
+    "highlight.local.desc":
+      "Full Quran text bundled on device. Prayer times computed locally once location is available.",
+    "highlight.watch.title": "iPhone + Watch",
+    "highlight.watch.desc":
+      "A unified companion across phone and wrist for reading, salah, and Qibla.",
+    "highlight.support.title": "Community supported",
+    "highlight.support.desc":
+      "Optional tips help keep Noor simple, beautiful, and accessible for Muslims worldwide.",
+    "download.title": "Begin your journey with Noor",
+    "download.subtitle":
+      "A spiritual reading and worship companion — made with devotion for Noor Essence.",
+    "download.app_store": "Download on the App Store",
+    "download.coming_soon": "Coming soon on the App Store",
+    "download.watch": "Apple Watch companion included",
+    "footer.tagline": "May Allah bless you",
+    "footer.made": "Made with devotion for Noor Essence",
+    "footer.rights": "© Noor Quran. All rights reserved.",
+  },
+
+  ar: {
+    "meta.title": "نور — القرآن وأوقات الصلاة والقبلة",
+    "meta.description":
+      "نور رفيق روحاني جميل لقراءة القرآن وأوقات الصلاة واتجاه القبلة — خاص على جهازك، بعشر لغات.",
+    "nav.features": "الميزات",
+    "nav.highlights": "لماذا نور",
+    "nav.download": "التنزيل",
+    "nav.privacy": "الخصوصية",
+    "nav.terms": "الشروط",
+    "hero.badge": "ملاذ مقدس",
+    "hero.title": "نور لعبادتك اليومية",
+    "hero.subtitle":
+      "اقرأ القرآن مع الترجمة، وتابع أوقات الصلاة بدقة، واعثر على القبلة — في تجربة هادئة مصممة للتأمل.",
+    "hero.cta": "التنزيل من App Store",
+    "hero.cta_note": "مجاني · iPhone وApple Watch",
+    "hero.screenshots_alt":
+      "لقطات تطبيق نور: فهرس القرآن وأوقات الصلاة والقارئ وبوصلة القبلة",
+    "features.title": "كل ما تحتاجه للعبادة اليومية",
+    "features.subtitle":
+      "أربعة فضاءات مدروسة — القرآن، الصلاة، القبلة، والإعدادات — بأسلوب نور إيسنس.",
+    "feature.quran.title": "قارئ القرآن",
+    "feature.quran.desc":
+      "تصفح بالسورة أو الجزء. العربية مع الترجمة، استئناف القراءة، بحث على الجهاز، والاستماع بصوت.",
+    "feature.prayer.title": "أوقات الصلاة",
+    "feature.prayer.desc":
+      "الصلوات الخمس محسوبة محلياً من موقعك، مع عد تنازلي للصلاة القادمة والتاريخ الهجري والتذكيرات.",
+    "feature.qibla.title": "بوصلة القبلة",
+    "feature.qibla.desc":
+      "بوصلة زجاجية نحو مكة مع إرشاد الاتجاه وتغذية المحاذاة والمسافة.",
+    "feature.widget.title": "ودجات الشاشة الرئيسية",
+    "feature.widget.desc":
+      "عد تنازلي للصلاة القادمة وآية اليوم — اضغط لفتح الآية في التطبيق.",
+    "feature.watch.title": "Apple Watch",
+    "feature.watch.desc":
+      "القرآن وأوقات الصلاة والقبلة على معصمك — دون الحاجة لهاتفك.",
+    "feature.privacy.title": "خصوصية بالتصميم",
+    "feature.privacy.desc":
+      "نص القرآن والبحث يبقيان على جهازك. بلا إعلانات. بلا تحليلات طرف ثالث في الإصدار الحالي.",
+    "highlights.title": "لماذا يختار المسلمون نور",
+    "highlight.languages.title": "10 لغات",
+    "highlight.languages.desc":
+      "واجهة وترجمات قرآنية بالعربية والإنجليزية والصينية والإندونيسية والملايو والتركية والأردية والهندية والبنغالية.",
+    "highlight.ayah.title": "آية اليوم",
+    "highlight.ayah.desc": "آية واحدة كل يوم — متزامنة بين التطبيق والودجت.",
+    "highlight.design.title": "تصميم الملاذ المقدس",
+    "highlight.design.desc": "أسطح كريمية وزمردي عميق ولمسات ذهبية — هدوء تحريري مستوحى من العمارة الإسلامية.",
+    "highlight.local.title": "يعمل دون اتصال",
+    "highlight.local.desc": "نص القرآن كاملاً على الجهاز. أوقات الصلاة محسوبة محلياً.",
+    "highlight.watch.title": "iPhone + Watch",
+    "highlight.watch.desc": "رفيق موحد على الهاتف والمعصم للقراءة والصلاة والقبلة.",
+    "highlight.support.title": "بدعم المجتمع",
+    "highlight.support.desc": "إكراميات اختيارية تساعد نور أن يبقى بسيطاً وجميلاً ومتاحاً للمسلمين حول العالم.",
+    "download.title": "ابدأ رحلتك مع نور",
+    "download.subtitle": "رفيق للقراءة الروحية والعبادة — صُنع بإخلاص لنور إيسنس.",
+    "download.app_store": "التنزيل من App Store",
+    "download.coming_soon": "قريباً على App Store",
+    "download.watch": "رفيق Apple Watch مضمن",
+    "footer.tagline": "بارك الله فيك",
+    "footer.made": "صُنع بإخلاص لنور إيسنس",
+    "footer.rights": "© نور قرآن. جميع الحقوق محفوظة.",
+  },
+
+  "zh-Hans": {
+    "meta.title": "Noor — 古兰经、礼拜时间与朝向",
+    "meta.description":
+      "Noor 是优雅的灵修伴侣：阅读古兰经、每日礼拜时间与朝向 — 本地私密，支持 10 种语言。",
+    "nav.features": "功能",
+    "nav.highlights": "亮点",
+    "nav.download": "下载",
+    "nav.privacy": "隐私",
+    "nav.terms": "条款",
+    "hero.badge": "神圣静所",
+    "hero.title": "照亮每日敬拜",
+    "hero.subtitle":
+      "阅读带译文的古兰经、查看精准礼拜时间、寻找朝向 — 一切尽在宁静、富有编辑感的体验中。",
+    "hero.cta": "在 App Store 下载",
+    "hero.cta_note": "免费 · iPhone 与 Apple Watch",
+    "hero.screenshots_alt": "Noor 应用截图：古兰经首页、礼拜时间、阅读与朝向罗盘",
+    "features.title": "每日敬拜所需",
+    "features.subtitle": "古兰经、礼拜、朝向与设置 — 以 Noor Essence 设计系统精心打造。",
+    "feature.quran.title": "古兰经阅读",
+    "feature.quran.desc": "按章（苏拉）或卷（朱兹）浏览。阿语与译文、续读、设备内搜索与朗读。",
+    "feature.prayer.title": "礼拜时间",
+    "feature.prayer.desc": "根据位置本地计算五次礼拜，含下次礼拜倒计时、回历日期与可选提醒。",
+    "feature.qibla.title": "朝向罗盘",
+    "feature.qibla.desc": "玻璃风格麦加朝向罗盘，含转向指引、对齐反馈、距离与校准提示。",
+    "feature.widget.title": "主屏幕小组件",
+    "feature.widget.desc": "下次礼拜倒计时与每日经文 — 点击在应用中打开。",
+    "feature.watch.title": "Apple Watch",
+    "feature.watch.desc": "在手腕上阅读古兰经、查看礼拜与朝向 — 无需拿起手机。",
+    "feature.privacy.title": "隐私优先",
+    "feature.privacy.desc": "经文与搜索留在设备上。无广告。当前版本无第三方分析。",
+    "highlights.title": "穆斯林选择 Noor 的原因",
+    "highlight.languages.title": "10 种语言",
+    "highlight.languages.desc": "界面与经文译文：英、阿、简繁中文、印尼、马来、土、乌尔都、印地、孟加拉语。",
+    "highlight.ayah.title": "每日经文",
+    "highlight.ayah.desc": "每天一节经文 — 应用与小组件同步。",
+    "highlight.design.title": "神圣静所设计",
+    "highlight.design.desc": "暖奶油色、深祖母绿与金色点缀 — 清真寺建筑启发的宁静版式。",
+    "highlight.local.title": "离线可用",
+    "highlight.local.desc": "完整经文内置设备。有位置后本地计算礼拜时间。",
+    "highlight.watch.title": "iPhone + 手表",
+    "highlight.watch.desc": "手机与手腕统一的阅读、礼拜与朝向伴侣。",
+    "highlight.support.title": "社区支持",
+    "highlight.support.desc": "可选打赏帮助 Noor 保持简洁、美观，服务全球穆斯林。",
+    "download.title": "与 Noor 开启旅程",
+    "download.subtitle": "灵修阅读与敬拜伴侣 — 为 Noor Essence 倾心打造。",
+    "download.app_store": "在 App Store 下载",
+    "download.coming_soon": "即将登陆 App Store",
+    "download.watch": "含 Apple Watch 伴侣",
+    "footer.tagline": "愿真主赐福于你",
+    "footer.made": "为 Noor Essence 倾心打造",
+    "footer.rights": "© Noor Quran. 保留所有权利。",
+  },
+
+  "zh-Hant": {
+    "meta.title": "Noor — 古蘭經、禮拜時間與朝向",
+    "meta.description":
+      "Noor 是優雅的靈修伴侶：閱讀古蘭經、每日禮拜時間與朝向 — 本機私密，支援 10 種語言。",
+    "nav.features": "功能",
+    "nav.highlights": "亮點",
+    "nav.download": "下載",
+    "nav.privacy": "隱私",
+    "nav.terms": "條款",
+    "hero.badge": "神聖靜所",
+    "hero.title": "照亮每日敬拜",
+    "hero.subtitle":
+      "閱讀帶譯文的古蘭經、查看精準禮拜時間、尋找朝向 — 一切盡在寧靜、富有編輯感的體驗中。",
+    "hero.cta": "在 App Store 下載",
+    "hero.cta_note": "免費 · iPhone 與 Apple Watch",
+    "hero.screenshots_alt": "Noor App 截圖：古蘭經首頁、禮拜時間、閱讀與朝向羅盤",
+    "features.title": "每日敬拜所需",
+    "features.subtitle": "古蘭經、禮拜、朝向與設定 — 以 Noor Essence 設計系統精心打造。",
+    "feature.quran.title": "古蘭經閱讀",
+    "feature.quran.desc": "依章（蘇拉）或卷（朱茲）瀏覽。阿語與譯文、續讀、裝置內搜尋與朗讀。",
+    "feature.prayer.title": "禮拜時間",
+    "feature.prayer.desc": "依位置本機計算五次禮拜，含下次禮拜倒數、回曆日期與可選提醒。",
+    "feature.qibla.title": "朝向羅盤",
+    "feature.qibla.desc": "玻璃風格麥加朝向羅盤，含轉向指引、對齊回饋、距離與校準提示。",
+    "feature.widget.title": "主畫面小工具",
+    "feature.widget.desc": "下次禮拜倒數與每日經文 — 點擊在 App 中開啟。",
+    "feature.watch.title": "Apple Watch",
+    "feature.watch.desc": "在手腕上閱讀古蘭經、查看禮拜與朝向 — 無需拿起手機。",
+    "feature.privacy.title": "隱私優先",
+    "feature.privacy.desc": "經文與搜尋留在裝置上。無廣告。目前版本無第三方分析。",
+    "highlights.title": "穆斯林選擇 Noor 的原因",
+    "highlight.languages.title": "10 種語言",
+    "highlight.languages.desc": "介面與經文譯文：英、阿、簡繁中文、印尼、馬來、土、烏爾都、印地、孟加拉語。",
+    "highlight.ayah.title": "每日經文",
+    "highlight.ayah.desc": "每天一節經文 — App 與小工具同步。",
+    "highlight.design.title": "神聖靜所設計",
+    "highlight.design.desc": "暖奶油色、深祖母綠與金色點綴 — 清真寺建築啟發的寧靜版式。",
+    "highlight.local.title": "離線可用",
+    "highlight.local.desc": "完整經文內建裝置。有位置後本機計算禮拜時間。",
+    "highlight.watch.title": "iPhone + 手錶",
+    "highlight.watch.desc": "手機與手腕統一的閱讀、禮拜與朝向伴侶。",
+    "highlight.support.title": "社群支持",
+    "highlight.support.desc": "可選打賞幫助 Noor 保持簡潔、美觀，服務全球穆斯林。",
+    "download.title": "與 Noor 開啟旅程",
+    "download.subtitle": "靈修閱讀與敬拜伴侶 — 為 Noor Essence 傾心打造。",
+    "download.app_store": "在 App Store 下載",
+    "download.coming_soon": "即將登陸 App Store",
+    "download.watch": "含 Apple Watch 伴侶",
+    "footer.tagline": "願真主賜福於你",
+    "footer.made": "為 Noor Essence 傾心打造",
+    "footer.rights": "© Noor Quran. 保留所有權利。",
+  },
+
+  id: {
+    "meta.title": "Noor — Al-Quran, Waktu Shalat & Kiblat",
+    "meta.description":
+      "Noor adalah teman spiritual untuk membaca Al-Quran, waktu shalat harian, dan arah kiblat — privat di perangkat, 10 bahasa.",
+    "nav.features": "Fitur",
+    "nav.highlights": "Mengapa Noor",
+    "nav.download": "Unduh",
+    "nav.privacy": "Privasi",
+    "nav.terms": "Ketentuan",
+    "hero.badge": "Sanctuary Suci",
+    "hero.title": "Cahaya untuk ibadah harian Anda",
+    "hero.subtitle":
+      "Baca Al-Quran dengan terjemahan, ikuti waktu shalat akurat, dan temukan kiblat — dalam pengalaman tenang yang dirancang untuk refleksi.",
+    "hero.cta": "Unduh di App Store",
+    "hero.cta_note": "Gratis · iPhone & Apple Watch",
+    "hero.screenshots_alt":
+      "Tangkapan layar Noor: indeks Al-Quran, waktu shalat, pembaca, dan kiblat",
+    "features.title": "Semua untuk ibadah harian",
+    "features.subtitle":
+      "Empat ruang — Al-Quran, Shalat, Kiblat, dan Pengaturan — dengan desain Noor Essence.",
+    "feature.quran.title": "Pembaca Al-Quran",
+    "feature.quran.desc":
+      "Jelajahi per Surah atau Juz. Arab dengan terjemahan, lanjutkan bacaan, pencarian di perangkat, dan bacakan suara.",
+    "feature.prayer.title": "Waktu Shalat",
+    "feature.prayer.desc":
+      "Lima waktu shalat dihitung lokal dari lokasi Anda, dengan hitung mundur shalat berikutnya, tanggal Hijriah, dan pengingat.",
+    "feature.qibla.title": "Kompas Kiblat",
+    "feature.qibla.desc":
+      "Kompas bergaya kaca menuju Makkah dengan panduan belok, umpan balik alignment, jarak, dan kalibrasi.",
+    "feature.widget.title": "Widget Layar Utama",
+    "feature.widget.desc":
+      "Hitung mundur shalat berikutnya dan Ayat Hari Ini — ketuk untuk membuka ayat di aplikasi.",
+    "feature.watch.title": "Apple Watch",
+    "feature.watch.desc":
+      "Al-Quran, waktu shalat, dan kiblat di pergelangan tangan — tanpa mengambil ponsel.",
+    "feature.privacy.title": "Privat by design",
+    "feature.privacy.desc":
+      "Teks dan pencarian Al-Quran tetap di perangkat. Tanpa iklan. Tanpa analitik pihak ketiga pada versi ini.",
+    "highlights.title": "Mengapa Muslim memilih Noor",
+    "highlight.languages.title": "10 bahasa",
+    "highlight.languages.desc":
+      "UI dan terjemahan Al-Quran: Inggris, Arab, Cina, Indonesia, Melayu, Turki, Urdu, Hindi, Bengali.",
+    "highlight.ayah.title": "Ayat Hari Ini",
+    "highlight.ayah.desc": "Satu ayat bermakna setiap hari — sinkron antara aplikasi dan widget.",
+    "highlight.design.title": "Desain Sacred Sanctuary",
+    "highlight.design.desc":
+      "Krem hangat, zamrud dalam, dan aksen emas — ketenangan editorial terinspirasi arsitektur masjid.",
+    "highlight.local.title": "Bekerja offline",
+    "highlight.local.desc":
+      "Teks Al-Quran lengkap di perangkat. Waktu shalat dihitung lokal setelah lokasi tersedia.",
+    "highlight.watch.title": "iPhone + Watch",
+    "highlight.watch.desc": "Teman seragam di ponsel dan pergelangan untuk bacaan, shalat, dan kiblat.",
+    "highlight.support.title": "Didukung komunitas",
+    "highlight.support.desc":
+      "Tip sukarela membantu Noor tetap sederhana, indah, dan terjangkau bagi Muslim di seluruh dunia.",
+    "download.title": "Mulai perjalanan dengan Noor",
+    "download.subtitle":
+      "Teman bacaan spiritual dan ibadah — dibuat dengan dedikasi untuk Noor Essence.",
+    "download.app_store": "Unduh di App Store",
+    "download.coming_soon": "Segera di App Store",
+    "download.watch": "Termasuk pendamping Apple Watch",
+    "footer.tagline": "Semoga Allah memberkahi Anda",
+    "footer.made": "Dibuat dengan dedikasi untuk Noor Essence",
+    "footer.rights": "© Noor Quran. Hak cipta dilindungi.",
+  },
+
+  ms: {
+    "meta.title": "Noor — Al-Quran, Waktu Solat & Kiblat",
+    "meta.description":
+      "Noor ialah teman rohani untuk membaca Al-Quran, waktu solat harian dan arah kiblat — peribadi pada peranti, 10 bahasa.",
+    "nav.features": "Ciri",
+    "nav.highlights": "Mengapa Noor",
+    "nav.download": "Muat turun",
+    "nav.privacy": "Privasi",
+    "nav.terms": "Terma",
+    "hero.badge": "Sanctuary Suci",
+    "hero.title": "Cahaya untuk ibadah harian anda",
+    "hero.subtitle":
+      "Baca Al-Quran dengan terjemahan, ikuti waktu solat tepat, dan cari kiblat — dalam pengalaman tenang untuk refleksi.",
+    "hero.cta": "Muat turun di App Store",
+    "hero.cta_note": "Percuma · iPhone & Apple Watch",
+    "hero.screenshots_alt":
+      "Tangkapan skrin Noor: indeks Al-Quran, waktu solat, pembaca, dan kiblat",
+    "features.title": "Segala-galanya untuk ibadah harian",
+    "features.subtitle":
+      "Empat ruang — Al-Quran, Solat, Kiblat dan Tetapan — dengan reka bentuk Noor Essence.",
+    "feature.quran.title": "Pembaca Al-Quran",
+    "feature.quran.desc":
+      "Layari mengikut Surah atau Juz. Arab dengan terjemahan, sambung bacaan, carian pada peranti, dan bacaan suara.",
+    "feature.prayer.title": "Waktu Solat",
+    "feature.prayer.desc":
+      "Lima waktu solat dikira secara tempatan, dengan kira detik solat seterusnya, tarikh Hijrah dan peringatan.",
+    "feature.qibla.title": "Kompas Kiblat",
+    "feature.qibla.desc":
+      "Kompas kaca ke arah Makkah dengan panduan pusingan, maklum balas penjajaran, jarak dan penentukuran.",
+    "feature.widget.title": "Widget Skrin Utama",
+    "feature.widget.desc":
+      "Kira detik solat seterusnya dan Ayat Hari Ini — ketik untuk buka ayat dalam aplikasi.",
+    "feature.watch.title": "Apple Watch",
+    "feature.watch.desc":
+      "Al-Quran, waktu solat dan kiblat di pergelangan tangan — tanpa mengambil telefon.",
+    "feature.privacy.title": "Privasi terbina",
+    "feature.privacy.desc":
+      "Teks dan carian Al-Quran kekal pada peranti. Tiada iklan. Tiada analitik pihak ketiga pada versi semasa.",
+    "highlights.title": "Mengapa Muslim memilih Noor",
+    "highlight.languages.title": "10 bahasa",
+    "highlight.languages.desc":
+      "UI dan terjemahan: Inggeris, Arab, Cina, Indonesia, Melayu, Turki, Urdu, Hindi, Bengali.",
+    "highlight.ayah.title": "Ayat Hari Ini",
+    "highlight.ayah.desc": "Satu ayat bermakna setiap hari — disegerak antara aplikasi dan widget.",
+    "highlight.design.title": "Reka bentuk Sacred Sanctuary",
+    "highlight.design.desc":
+      "Krim hangat, zamrud gelap dan aksen emas — ketenangan editorial inspirasi masjid.",
+    "highlight.local.title": "Berfungsi luar talian",
+    "highlight.local.desc":
+      "Teks Al-Quran penuh pada peranti. Waktu solat dikira tempatan selepas lokasi tersedia.",
+    "highlight.watch.title": "iPhone + Watch",
+    "highlight.watch.desc": "Teman seragam pada telefon dan pergelangan untuk bacaan, solat dan kiblat.",
+    "highlight.support.title": "Disokong komuniti",
+    "highlight.support.desc":
+      "Tip sukarela membantu Noor kekal ringkas, cantik dan mudah diakses oleh Muslim di seluruh dunia.",
+    "download.title": "Mulakan perjalanan dengan Noor",
+    "download.subtitle":
+      "Teman bacaan rohani dan ibadah — dibuat dengan dedikasi untuk Noor Essence.",
+    "download.app_store": "Muat turun di App Store",
+    "download.coming_soon": "Akan datang di App Store",
+    "download.watch": "Termasuk teman Apple Watch",
+    "footer.tagline": "Semoga Allah memberkati anda",
+    "footer.made": "Dibuat dengan dedikasi untuk Noor Essence",
+    "footer.rights": "© Noor Quran. Hak cipta terpelihara.",
+  },
+
+  tr: {
+    "meta.title": "Noor — Kur'an, Namaz Vakitleri ve Kıble",
+    "meta.description":
+      "Noor, Kur'an okumak, günlük namaz vakitleri ve kıble yönü için güzel bir manevi yol arkadaşıdır — cihazda özel, 10 dil.",
+    "nav.features": "Özellikler",
+    "nav.highlights": "Neden Noor",
+    "nav.download": "İndir",
+    "nav.privacy": "Gizlilik",
+    "nav.terms": "Koşullar",
+    "hero.badge": "Kutsal Sığınak",
+    "hero.title": "Günlük ibadetinize ışık",
+    "hero.subtitle":
+      "Meallerle Kur'an okuyun, doğru namaz vakitlerini takip edin ve kıbleyi bulun — tefekkür için tasarlanmış sakin bir deneyim.",
+    "hero.cta": "App Store'dan İndir",
+    "hero.cta_note": "Ücretsiz · iPhone ve Apple Watch",
+    "hero.screenshots_alt":
+      "Noor ekran görüntüleri: Kur'an dizini, namaz vakitleri, okuyucu ve kıble",
+    "features.title": "Günlük ibadet için her şey",
+    "features.subtitle":
+      "Kur'an, Namaz, Kıble ve Ayarlar — Noor Essence tasarım sistemiyle.",
+    "feature.quran.title": "Kur'an Okuyucu",
+    "feature.quran.desc":
+      "Sure veya Cüz ile gezinin. Arapça ve meal, kaldığınız yerden devam, cihaz içi arama ve sesli okuma.",
+    "feature.prayer.title": "Namaz Vakitleri",
+    "feature.prayer.desc":
+      "Konumunuza göre yerel hesaplanan beş vakit, sonraki namaz geri sayımı, Hicri tarih ve hatırlatıcılar.",
+    "feature.qibla.title": "Kıble Pusulası",
+    "feature.qibla.desc":
+      "Mekke'ye cam tarzı pusula, dönüş rehberi, hizalama geri bildirimi, mesafe ve kalibrasyon.",
+    "feature.widget.title": "Ana Ekran Widget'ları",
+    "feature.widget.desc":
+      "Sonraki namaz geri sayımı ve Günün Ayeti — dokunarak uygulamada açın.",
+    "feature.watch.title": "Apple Watch",
+    "feature.watch.desc":
+      "Bileğinizde Kur'an, namaz vakitleri ve kıble — telefona gerek kalmadan.",
+    "feature.privacy.title": "Tasarımda gizlilik",
+    "feature.privacy.desc":
+      "Kur'an metni ve arama cihazınızda kalır. Reklam yok. Bu sürümde üçüncü taraf analitik yok.",
+    "highlights.title": "Müslümanlar neden Noor'u seçiyor",
+    "highlight.languages.title": "10 dil",
+    "highlight.languages.desc":
+      "Arayüz ve meal: İngilizce, Arapça, Çince, Endonezce, Malayca, Türkçe, Urduca, Hintçe, Bengalce.",
+    "highlight.ayah.title": "Günün Ayeti",
+    "highlight.ayah.desc": "Her gün anlamlı bir ayet — uygulama ve widget senkron.",
+    "highlight.design.title": "Sacred Sanctuary tasarımı",
+    "highlight.design.desc":
+      "Sıcak krem, derin zümrüt ve altın vurgular — cami mimarisinden ilham alan sakin düzen.",
+    "highlight.local.title": "Çevrimdışı çalışır",
+    "highlight.local.desc":
+      "Tam Kur'an metni cihazda. Konum sonrası namaz vakitleri yerel hesaplanır.",
+    "highlight.watch.title": "iPhone + Watch",
+    "highlight.watch.desc": "Okuma, namaz ve kıble için telefon ve bilekte birleşik yol arkadaşı.",
+    "highlight.support.title": "Topluluk destekli",
+    "highlight.support.desc":
+      "İsteğe bağlı bahşişler Noor'un dünya Müslümanları için sade ve erişilebilir kalmasına yardım eder.",
+    "download.title": "Noor ile yolculuğa başlayın",
+    "download.subtitle":
+      "Manevi okuma ve ibadet yol arkadaşı — Noor Essence için özveriyle yapıldı.",
+    "download.app_store": "App Store'dan İndir",
+    "download.coming_soon": "Yakında App Store'da",
+    "download.watch": "Apple Watch eşlikçisi dahil",
+    "footer.tagline": "Allah sizi mübarek kılsın",
+    "footer.made": "Noor Essence için özveriyle yapıldı",
+    "footer.rights": "© Noor Quran. Tüm hakları saklıdır.",
+  },
+
+  ur: {
+    "meta.title": "نور — قرآن، نماز کے اوقات اور قبلہ",
+    "meta.description":
+      "نور قرآن پڑھنے، روزانہ نماز کے اوقات اور قبلہ کی سمت کے لیے ایک خوبصورت روحانی ساتھی ہے — ڈیوائس پر نجی، 10 زبانیں۔",
+    "nav.features": "خصوصیات",
+    "nav.highlights": "نور کیوں",
+    "nav.download": "ڈاؤن لوڈ",
+    "nav.privacy": "رازداری",
+    "nav.terms": "شرائط",
+    "hero.badge": "مقدس پناہ",
+    "hero.title": "آپ کی روزانہ عبادت کے لیے نور",
+    "hero.subtitle":
+      "ترجمے کے ساتھ قرآن پڑھیں، درست نماز کے اوقات رکھیں، اور قبلہ تلاش کریں — غور و فکر کے لیے پرسکون تجربہ۔",
+    "hero.cta": "App Store سے ڈاؤن لوڈ",
+    "hero.cta_note": "مفت · iPhone اور Apple Watch",
+    "hero.screenshots_alt":
+      "نور ایپ کی تصاویر: قرآن انڈیکس، نماز کے اوقات، ریڈر اور قبلہ",
+    "features.title": "روزانہ عبادت کی ہر چیز",
+    "features.subtitle":
+      "قرآن، نماز، قبلہ اور ترتیبات — نور ایسنس ڈیزائن کے ساتھ۔",
+    "feature.quran.title": "قرآن ریڈر",
+    "feature.quran.desc":
+      "سورت یا پارے سے براؤز کریں۔ عربی اور ترجمہ، پڑھائی جاری، ڈیوائس پر تلاش، اور آواز میں سنیں۔",
+    "feature.prayer.title": "نماز کے اوقات",
+    "feature.prayer.desc":
+      "آپ کے مقام سے مقامی طور پر پانچ نمازیں، اگلی نماز کا الٹی گنتی، ہجری تاریخ اور یاددہانیاں۔",
+    "feature.qibla.title": "قبلہ کمپاس",
+    "feature.qibla.desc":
+      "مکہ کی طرف شیشے جیسا کمپاس، موڑ کی رہنمائی، سیدھ کی رائے، فاصلہ اور کیلیبریشن۔",
+    "feature.widget.title": "ہوم اسکرین ویجٹ",
+    "feature.widget.desc":
+      "اگلی نماز کا الٹی گنتی اور آیتِ دن — تھپتھپا کر ایپ میں کھولیں۔",
+    "feature.watch.title": "Apple Watch",
+    "feature.watch.desc":
+      "کلائی پر قرآن، نماز اور قبلہ — فون اٹھائے بغیر۔",
+    "feature.privacy.title": "رازداری پہلے",
+    "feature.privacy.desc":
+      "قرآن کا متن اور تلاش ڈیوائس پر رہتی ہے۔ کوئی اشتہار نہیں۔ موجودہ ورژن میں تیسرے فریق کا تجزیہ نہیں۔",
+    "highlights.title": "مسلمان نور کیوں چنتے ہیں",
+    "highlight.languages.title": "10 زبانیں",
+    "highlight.languages.desc":
+      "انٹرفیس اور ترجمہ: انگریزی، عربی، چینی، انڈونیشیائی، ملاے، ترکی، اردو، ہندی، بنگالی۔",
+    "highlight.ayah.title": "آیتِ دن",
+    "highlight.ayah.desc": "ہر دن ایک معنی خیز آیت — ایپ اور ویجٹ میں ہم آہنگ۔",
+    "highlight.design.title": "مقدس پناہ ڈیزائن",
+    "highlight.design.desc":
+      "گرم کریم، گہرا زمردی اور سنہری لمس — مسجد معماری سے متاثر پرسکون انداز۔",
+    "highlight.local.title": "آف لائن کام کرتا ہے",
+    "highlight.local.desc":
+      "مکمل قرآن ڈیوائس پر۔ مقام کے بعد نماز کے اوقات مقامی حساب۔",
+    "highlight.watch.title": "iPhone + Watch",
+    "highlight.watch.desc": "پڑھائی، نماز اور قبلہ کے لیے فون اور کلائی پر ایک ساتھی۔",
+    "highlight.support.title": "کمیونٹی کی حمایت",
+    "highlight.support.desc":
+      "اختیاری ٹپس نور کو دنیا بھر کے مسلمانوں کے لیے سادہ اور خوبصورت رکھنے میں مدد کرتی ہیں۔",
+    "download.title": "نور کے ساتھ سفر شروع کریں",
+    "download.subtitle":
+      "روحانی مطالعہ اور عبادت کا ساتھی — نور ایسنس کے لیے خلوص سے بنایا گیا۔",
+    "download.app_store": "App Store سے ڈاؤن لوڈ",
+    "download.coming_soon": "جلد App Store پر",
+    "download.watch": "Apple Watch ساتھی شامل",
+    "footer.tagline": "اللہ آپ کو برکت دے",
+    "footer.made": "نور ایسنس کے لیے خلوص سے بنایا گیا",
+    "footer.rights": "© نور قرآن۔ جملہ حقوق محفوظ ہیں۔",
+  },
+
+  hi: {
+    "meta.title": "Noor — क़ुरआन, नमाज़ के समय और क़िबला",
+    "meta.description":
+      "Noor क़ुरआन पढ़ने, दैनिक नमाज़ के समय और क़िबला दिशा के लिए एक सुंदर आध्यात्मिक साथी है — डिवाइस पर निजी, 10 भाषाएँ।",
+    "nav.features": "विशेषताएँ",
+    "nav.highlights": "क्यों Noor",
+    "nav.download": "डाउनलोड",
+    "nav.privacy": "गोपनीयता",
+    "nav.terms": "शर्तें",
+    "hero.badge": "पवित्र आश्रय",
+    "hero.title": "आपकी दैनिक इबादत के लिए नूर",
+    "hero.subtitle":
+      "अनुवाद के साथ क़ुरआन पढ़ें, सटीक नमाज़ के समय पाएँ और क़िबला खोजें — चिंतन के लिए शांत अनुभव।",
+    "hero.cta": "App Store से डाउनलोड करें",
+    "hero.cta_note": "मुफ़्त · iPhone और Apple Watch",
+    "hero.screenshots_alt":
+      "Noor ऐप स्क्रीनशॉट: क़ुरआन इंडेक्स, नमाज़, रीडर और क़िबला",
+    "features.title": "दैनिक इबादत की हर चीज़",
+    "features.subtitle":
+      "क़ुरआन, नमाज़, क़िबला और सेटिंग्स — Noor Essence डिज़ाइन के साथ।",
+    "feature.quran.title": "क़ुरआन रीडर",
+    "feature.quran.desc":
+      "सूरह या जुज़ से ब्राउज़ करें। अरबी और अनुवाद, पढ़ाई जारी, डिवाइस पर खोज और पढ़कर सुनें।",
+    "feature.prayer.title": "नमाज़ के समय",
+    "feature.prayer.desc":
+      "आपके स्थान से स्थानीय रूप से पाँच नमाज़, अगली नमाज़ की उलटी गिनती, हिजरी तिथि और अनुस्मारक।",
+    "feature.qibla.title": "क़िबला कम्पास",
+    "feature.qibla.desc":
+      "मक्का की ओर ग्लास-स्टाइल कम्पास, मोड़ मार्गदर्शन, संरेखण प्रतिक्रिया, दूरी और कैलिब्रेशन।",
+    "feature.widget.title": "होम स्क्रीन विजेट",
+    "feature.widget.desc":
+      "अगली नमाज़ की उलटी गिनती और दिन की आयत — टैप करके ऐप में खोलें।",
+    "feature.watch.title": "Apple Watch",
+    "feature.watch.desc":
+      "कलाई पर क़ुरआन, नमाज़ और क़िबला — फ़ोन उठाए बिना।",
+    "feature.privacy.title": "गोपनीयता पहले",
+    "feature.privacy.desc":
+      "क़ुरआन पाठ और खोज डिवाइस पर रहती है। कोई विज्ञापन नहीं। वर्तमान संस्करण में तृतीय-पक्ष विश्लेषण नहीं।",
+    "highlights.title": "मुसलमान Noor क्यों चुनते हैं",
+    "highlight.languages.title": "10 भाषाएँ",
+    "highlight.languages.desc":
+      "UI और अनुवाद: अंग्रेज़ी, अरबी, चीनी, इंडोनेशियाई, मलय, तुर्की, उर्दू, हिंदी, बंगाली।",
+    "highlight.ayah.title": "दिन की आयत",
+    "highlight.ayah.desc": "हर दिन एक सार्थक आयत — ऐप और विजेट में समन्वयित।",
+    "highlight.design.title": "Sacred Sanctuary डिज़ाइन",
+    "highlight.design.desc":
+      "गर्म क्रीम, गहरा पन्ना और सुनहरे स्पर्श — मस्जिद वास्तुकला से प्रेरित शांत लेआउट।",
+    "highlight.local.title": "ऑफ़लाइन काम करता है",
+    "highlight.local.desc":
+      "पूरा क़ुरआन डिवाइस पर। स्थान मिलने पर नमाज़ के समय स्थानीय गणना।",
+    "highlight.watch.title": "iPhone + Watch",
+    "highlight.watch.desc": "पढ़ाई, नमाज़ और क़िबला के लिए फ़ोन और कलाई पर एक साथी।",
+    "highlight.support.title": "समुदाय समर्थित",
+    "highlight.support.desc":
+      "वैकल्पिक टिप्स Noor को दुनिया भर के मुसलमानों के लिए सरल और सुंदर रखने में मदद करती हैं।",
+    "download.title": "Noor के साथ यात्रा शुरू करें",
+    "download.subtitle":
+      "आध्यात्मिक पठन और इबादत का साथी — Noor Essence के लिए समर्पण से बनाया गया।",
+    "download.app_store": "App Store से डाउनलोड करें",
+    "download.coming_soon": "जल्द App Store पर",
+    "download.watch": "Apple Watch साथी शामिल",
+    "footer.tagline": "अल्लाह आपको बरकत दे",
+    "footer.made": "Noor Essence के लिए समर्पण से बनाया गया",
+    "footer.rights": "© Noor Quran. सर्वाधिकार सुरक्षित।",
+  },
+
+  bn: {
+    "meta.title": "Noor — কুরআন, নামাজের সময় ও কিবলা",
+    "meta.description":
+      "Noor কুরআন পড়া, দৈনিক নামাজের সময় ও কিবলার দিকের জন্য একটি সুন্দর আধ্যাত্মিক সঙ্গী — ডিভাইসে ব্যক্তিগত, ১০টি ভাষা।",
+    "nav.features": "বৈশিষ্ট্য",
+    "nav.highlights": "কেন Noor",
+    "nav.download": "ডাউনলোড",
+    "nav.privacy": "গোপনীয়তা",
+    "nav.terms": "শর্তাবলী",
+    "hero.badge": "পবিত্র আশ্রয়",
+    "hero.title": "আপনার দৈনিক ইবাদতের জন্য নূর",
+    "hero.subtitle":
+      "অনুবাদসহ কুরআন পড়ুন, সঠিক নামাজের সময় ও কিবলা খুঁজুন — চিন্তার জন্য শান্ত অভিজ্ঞতা।",
+    "hero.cta": "App Store থেকে ডাউনলোড",
+    "hero.cta_note": "বিনামূল্যে · iPhone ও Apple Watch",
+    "hero.screenshots_alt":
+      "Noor অ্যাপ স্ক্রিনশট: কুরআন ইনডেক্স, নামাজ, রিডার ও কিবলা",
+    "features.title": "দৈনিক ইবাদতের সবকিছু",
+    "features.subtitle":
+      "কুরআন, নামাজ, কিবলা ও সেটিংস — Noor Essence ডিজাইন সহ।",
+    "feature.quran.title": "কুরআন রিডার",
+    "feature.quran.desc":
+      "সূরা বা পারা অনুযায়ী ব্রাউজ করুন। আরবি ও অনুবাদ, পড়া চালিয়ে যান, ডিভাইসে অনুসন্ধান ও শোনানো।",
+    "feature.prayer.title": "নামাজের সময়",
+    "feature.prayer.desc":
+      "আপনার অবস্থান থেকে স্থানীয়ভাবে পাঁচ ওয়াক্ত, পরবর্তী নামাজের কাউন্টডাউন, হিজরি তারিখ ও অনুস্মারক।",
+    "feature.qibla.title": "কিবলা কম্পাস",
+    "feature.qibla.desc":
+      "মক্কার দিকে গ্লাস-স্টাইল কম্পাস, ঘুরানোর নির্দেশনা, সারিবদ্ধতা প্রতিক্রিয়া, দূরত্ব ও ক্যালিব্রেশন।",
+    "feature.widget.title": "হোম স্ক্রিন উইজেট",
+    "feature.widget.desc":
+      "পরবর্তী নামাজের কাউন্টডাউন ও দিনের আয়াত — ট্যাপ করে অ্যাপে খুলুন।",
+    "feature.watch.title": "Apple Watch",
+    "feature.watch.desc":
+      "কব্জিতে কুরআন, নামাজ ও কিবলা — ফোন না তুলেই।",
+    "feature.privacy.title": "গোপনীয়তা প্রথম",
+    "feature.privacy.desc":
+      "কুরআনের পাঠ ও অনুসন্ধান ডিভাইসেই থাকে। কোনো বিজ্ঞাপন নেই। বর্তমান সংস্করণে তৃতীয় পক্ষের বিশ্লেষণ নেই।",
+    "highlights.title": "মুসলমানরা কেন Noor বেছে নেন",
+    "highlight.languages.title": "১০টি ভাষা",
+    "highlight.languages.desc":
+      "ইন্টারফেস ও অনুবাদ: ইংরেজি, আরবি, চীনা, ইন্দোনেশীয়, মলয়, তুর্কি, উর্দু, হিন্দি, বাংলা।",
+    "highlight.ayah.title": "দিনের আয়াত",
+    "highlight.ayah.desc": "প্রতিদিন একটি অর্থবহ আয়াত — অ্যাপ ও উইজেটে সমন্বয়িত।",
+    "highlight.design.title": "Sacred Sanctuary ডিজাইন",
+    "highlight.design.desc":
+      "উষ্ণ ক্রিম, গভীর পান্না ও স্বর্ণালংকার — মসজিদ স্থাপত্য থেকে অনুপ্রাণিত শান্ত বিন্যাস।",
+    "highlight.local.title": "অফলাইনে কাজ করে",
+    "highlight.local.desc":
+      "সম্পূর্ণ কুরআন ডিভাইসে। অবস্থান পাওয়ার পর স্থানীয়ভাবে নামাজের সময়।",
+    "highlight.watch.title": "iPhone + Watch",
+    "highlight.watch.desc": "পড়া, নামাজ ও কিবলার জন্য ফোন ও কব্জিতে এক সঙ্গী।",
+    "highlight.support.title": "সম্প্রদায় সমর্থিত",
+    "highlight.support.desc":
+      "ঐচ্ছিক টিপ বিশ্বের মুসলমানদের জন্য Noor সহজ ও সুন্দর রাখতে সাহায্য করে।",
+    "download.title": "Noor-এর সাথে যাত্রা শুরু করুন",
+    "download.subtitle":
+      "আধ্যাত্মিক পাঠ ও ইবাদতের সঙ্গী — Noor Essence-এর জন্য নিষ্ঠার সাথে তৈরি।",
+    "download.app_store": "App Store থেকে ডাউনলোড",
+    "download.coming_soon": "শীঘ্রই App Store-এ",
+    "download.watch": "Apple Watch সঙ্গী অন্তর্ভুক্ত",
+    "footer.tagline": "আল্লাহ আপনাকে বরকত দিন",
+    "footer.made": "Noor Essence-এর জন্য নিষ্ঠার সাথে তৈরি",
+    "footer.rights": "© Noor Quran. সর্বস্বত্ব সংরক্ষিত।",
+  },
+};
