@@ -2,8 +2,8 @@
  * Privacy / Terms pages — load localized HTML from website/legal/.
  */
 (function () {
-  const STORAGE_KEY = "noor-site-locale";
-  const RTL_LOCALES = new Set(["ar", "ur"]);
+  const STORAGE_KEY = window.NoorLocale?.STORAGE_KEY || "noor-site-locale";
+  const RTL_LOCALES = window.NoorLocale?.RTL_LOCALES || new Set(["ar", "ur"]);
 
   function siteRoot() {
     const path = window.location.pathname;
@@ -13,9 +13,7 @@
   }
 
   function detectLocale() {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    if (saved && window.NoorI18n?.[saved]) return saved;
-    return "en";
+    return window.NoorLocale?.detect() || "en";
   }
 
   function applyTranslations(locale) {

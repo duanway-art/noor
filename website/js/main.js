@@ -1,16 +1,13 @@
 (function () {
-  const RTL_LOCALES = new Set(["ar", "ur"]);
-  const STORAGE_KEY = "noor-site-locale";
+  const STORAGE_KEY = window.NoorLocale?.STORAGE_KEY || "noor-site-locale";
+  const RTL_LOCALES = window.NoorLocale?.RTL_LOCALES || new Set(["ar", "ur"]);
 
   function supportedLocales() {
-    return Object.keys(window.NoorI18n || {}).filter((k) => !k.startsWith("_"));
+    return window.NoorLocale?.supported() || [];
   }
 
   function detectLocale() {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    if (saved && window.NoorI18n?.[saved]) return saved;
-    // Site default is English; do not auto-switch from browser language.
-    return "en";
+    return window.NoorLocale?.detect() || "en";
   }
 
   function t(locale, key) {
