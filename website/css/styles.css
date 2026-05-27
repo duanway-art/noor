@@ -672,7 +672,9 @@ body.site-dialog-open {
 #android-soon-dialog .wechat-guide__panel {
   display: flex;
   flex-direction: column;
-  padding-bottom: calc(1.5rem + 30px);
+  align-items: center;
+  justify-content: center;
+  padding: 1.75rem 1.5rem;
 }
 
 #android-soon-dialog .wechat-guide__title {
@@ -684,10 +686,49 @@ body.site-dialog-open {
 }
 
 #android-soon-dialog .android-soon__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#ios-scan-dialog .ios-scan__panel {
+  width: min(100%, 24rem);
+}
+
+#ios-scan-dialog .ios-scan__content {
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+#ios-scan-dialog .ios-scan__message {
+  margin: 0;
+  font-family: var(--font-headline);
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+#ios-scan-dialog .ios-scan__qr {
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 0.5rem;
+  background: #fff;
+}
+
+#ios-scan-dialog .wechat-guide__actions {
+  width: 100%;
+  margin-top: 0.25rem;
+}
+
+#ios-scan-dialog .wechat-guide__actions .btn {
+  justify-content: center;
   text-align: center;
 }
 

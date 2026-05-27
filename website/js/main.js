@@ -73,6 +73,19 @@
     return /MicroMessenger/i.test(navigator.userAgent || "");
   }
 
+  function isMobileOrTablet() {
+    const ua = navigator.userAgent || "";
+    if (/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini|Mobile/i.test(ua)) {
+      return true;
+    }
+    if (/iPad/i.test(ua)) return true;
+    return navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1;
+  }
+
+  function isDesktop() {
+    return !isMobileOrTablet();
+  }
+
   function appStoreUrl() {
     return window.NOOR_SITE?.appStoreUrl?.trim() || "";
   }
@@ -211,6 +224,47 @@
     document.body.classList.remove("site-dialog-open");
   }
 
+  function showIosScanDialog() {
+    const dialog = document.getElementById("ios-scan-dialog");
+    if (!dialog) return;
+    dialog.classList.remove("hidden");
+    dialog.hidden = false;
+    document.body.classList.add("site-dialog-open");
+    dialog.querySelector("[data-ios-scan-dismiss].btn")?.focus();
+  }
+
+  function hideIosScanDialog() {
+    const dialog = document.getElementById("ios-scan-dialog");
+    if (!dialog) return;
+    dialog.classList.add("hidden");
+    dialog.hidden = true;
+    document.body.classList.remove("site-dialog-open");
+  }
+
+  function setupIosDesktopScanModal() {
+    if (!appStoreUrl()) return;
+
+    document.querySelectorAll('[data-store-download="app-store"]').forEach((el) => {
+      el.addEventListener(
+        "click",
+        (event) => {
+          if (!isDesktop()) return;
+          event.preventDefault();
+          event.stopImmediatePropagation();
+          showIosScanDialog();
+        },
+        true
+      );
+    });
+
+    document
+      .getElementById("ios-scan-dialog")
+      ?.querySelectorAll("[data-ios-scan-dismiss]")
+      .forEach((el) => {
+        el.addEventListener("click", hideIosScanDialog);
+      });
+  }
+
   function setupAndroidSoonModal() {
     if (googlePlayUrl()) return;
 
@@ -291,6 +345,7 @@
   setupLanguageSwitcher(locale);
   applyTranslations(locale);
   setupDownloadLinks();
+  setupIosDesktopScanModal();
   setupAndroidSoonModal();
   setupWeChatDownload();
   setupLegalLinks();

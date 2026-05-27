@@ -87,6 +87,8 @@ window.NoorI18n = {
     "download.watch": "Apple Watch companion included",
     "android_soon.message": "Coming soon — stay tuned!",
     "android_soon.dismiss": "OK",
+    "ios_scan.message": "Scan with iPhone or iPad to download",
+    "ios_scan.qr_alt": "QR code to download Noor on the App Store",
     "wechat.title": "Open in your browser to download",
     "wechat.body":
       "WeChat cannot open the App Store or Google Play directly. Tap ··· at the top right, choose “Open in Browser”, then download Noor.",
@@ -164,6 +166,8 @@ window.NoorI18n = {
     "download.watch": "رفيق Apple Watch مضمن",
     "android_soon.message": "قريباً — ترقّبوا!",
     "android_soon.dismiss": "حسناً",
+    "ios_scan.message": "امسح الرمز باستخدام iPhone أو iPad للتنزيل",
+    "ios_scan.qr_alt": "رمز QR لتنزيل نور من App Store",
     "wechat.title": "افتح في المتصفح للتنزيل",
     "wechat.body":
       "لا يمكن لـ WeChat فتح App Store أو Google Play مباشرة. اضغط ··· أعلى اليمين واختر «فتح في المتصفح» ثم نزّل نور.",
@@ -232,6 +236,8 @@ window.NoorI18n = {
     "download.watch": "含 Apple Watch 伴侣",
     "android_soon.message": "即将推出，敬请期待！",
     "android_soon.dismiss": "知道了",
+    "ios_scan.message": "请用 iPhone 或 iPad 扫码下载",
+    "ios_scan.qr_alt": "App Store 下载 Noor 的二维码",
     "wechat.title": "请在浏览器中打开以下载",
     "wechat.body":
       "微信内无法直接打开 App Store 或 Google Play。请点击右上角 ···，选择「在浏览器中打开」，即可下载 Noor。",
@@ -300,6 +306,8 @@ window.NoorI18n = {
     "download.watch": "含 Apple Watch 伴侶",
     "android_soon.message": "即將推出，敬請期待！",
     "android_soon.dismiss": "知道了",
+    "ios_scan.message": "請用 iPhone 或 iPad 掃碼下載",
+    "ios_scan.qr_alt": "App Store 下載 Noor 的二維碼",
     "wechat.title": "請在瀏覽器中開啟以下載",
     "wechat.body":
       "微信內無法直接開啟 App Store 或 Google Play。請點擊右上角 ···，選擇「在瀏覽器中開啟」，即可下載 Noor。",
@@ -381,6 +389,8 @@ window.NoorI18n = {
     "download.watch": "Termasuk pendamping Apple Watch",
     "android_soon.message": "Segera hadir — nantikan!",
     "android_soon.dismiss": "OK",
+    "ios_scan.message": "Pindai dengan iPhone atau iPad untuk mengunduh",
+    "ios_scan.qr_alt": "Kode QR untuk mengunduh Noor di App Store",
     "wechat.title": "Buka di browser untuk mengunduh",
     "wechat.body":
       "WeChat tidak bisa membuka App Store atau Google Play langsung. Ketuk ··· di kanan atas, pilih “Buka di Browser”, lalu unduh Noor.",
@@ -462,6 +472,8 @@ window.NoorI18n = {
     "download.watch": "Termasuk teman Apple Watch",
     "android_soon.message": "Akan datang — nantikan!",
     "android_soon.dismiss": "OK",
+    "ios_scan.message": "Imbas dengan iPhone atau iPad untuk muat turun",
+    "ios_scan.qr_alt": "Kod QR untuk muat turun Noor di App Store",
     "wechat.title": "Buka dalam pelayar untuk muat turun",
     "wechat.body":
       "WeChat tidak boleh membuka App Store atau Google Play terus. Ketik ··· di atas kanan, pilih “Buka dalam Pelayar”, kemudian muat turun Noor.",
@@ -543,6 +555,8 @@ window.NoorI18n = {
     "download.watch": "Apple Watch eşlikçisi dahil",
     "android_soon.message": "Çok yakında — takipte kalın!",
     "android_soon.dismiss": "Tamam",
+    "ios_scan.message": "iPhone veya iPad ile tarayıp indirin",
+    "ios_scan.qr_alt": "App Store'dan Noor indirmek için QR kodu",
     "wechat.title": "İndirmek için tarayıcıda açın",
     "wechat.body":
       "WeChat App Store veya Google Play'i doğrudan açamaz. Sağ üstteki ··· simgesine dokunun, “Tarayıcıda Aç”ı seçin ve Noor'u indirin.",
@@ -624,6 +638,8 @@ window.NoorI18n = {
     "download.watch": "Apple Watch ساتھی شامل",
     "android_soon.message": "جلد آرہا ہے — منتظر رہیں!",
     "android_soon.dismiss": "ٹھیک ہے",
+    "ios_scan.message": "iPhone یا iPad سے اسکین کر کے ڈاؤن لوڈ کریں",
+    "ios_scan.qr_alt": "App Store پر Noor ڈاؤن لوڈ کرنے کا QR کوڈ",
     "wechat.title": "ڈاؤن لوڈ کے لیے براؤزر میں کھولیں",
     "wechat.body":
       "WeChat براہ راست App Store یا Google Play نہیں کھول سکتا۔ اوپر دائیں ··· پر تھپتھپائیں، «براؤزر میں کھولیں» منتخب کریں، پھر Noor ڈاؤن لوڈ کریں۔",
@@ -705,6 +721,8 @@ window.NoorI18n = {
     "download.watch": "Apple Watch साथी शामिल",
     "android_soon.message": "जल्द आ रहा है — बने रहें!",
     "android_soon.dismiss": "ठीक है",
+    "ios_scan.message": "iPhone या iPad से स्कैन करके डाउनलोड करें",
+    "ios_scan.qr_alt": "App Store पर Noor डाउनलोड करने का QR कोड",
     "wechat.title": "डाउनलोड के लिए ब्राउज़र में खोलें",
     "wechat.body":
       "WeChat सीधे App Store या Google Play नहीं खोल सकता। ऊपर दाएँ ··· पर टैप करें, “ब्राउज़र में खोलें” चुनें, फिर Noor डाउनलोड करें।",
@@ -786,6 +804,8 @@ window.NoorI18n = {
     "download.watch": "Apple Watch সঙ্গী অন্তর্ভুক্ত",
     "android_soon.message": "শীঘ্রই আসছে — অপেক্ষায় থাকুন!",
     "android_soon.dismiss": "ঠিক আছে",
+    "ios_scan.message": "iPhone বা iPad দিয়ে স্ক্যান করে ডাউনলোড করুন",
+    "ios_scan.qr_alt": "App Store-এ Noor ডাউনলোডের QR কোড",
     "wechat.title": "ডাউনলোডের জন্য ব্রাউজারে খুলুন",
     "wechat.body":
       "WeChat সরাসরি App Store বা Google Play খুলতে পারে না। উপরে ডানদিকে ··· ট্যাপ করুন, “ব্রাউজারে খুলুন” বেছে নিন, তারপর Noor ডাউনলোড করুন।",

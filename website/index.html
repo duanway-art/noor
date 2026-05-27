@@ -351,6 +351,43 @@
     </footer>
 
     <div
+      id="ios-scan-dialog"
+      class="wechat-guide site-dialog--centered hidden"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="ios-scan-title"
+      hidden
+    >
+      <div class="wechat-guide__backdrop" data-ios-scan-dismiss></div>
+      <div class="wechat-guide__panel ios-scan__panel">
+        <div class="ios-scan__content">
+          <p id="ios-scan-title" class="ios-scan__message" data-i18n="ios_scan.message">
+            Scan with iPhone or iPad to download
+          </p>
+          <img
+            class="ios-scan__qr"
+            src="assets/app-store-qr.png"
+            width="200"
+            height="200"
+            alt=""
+            data-i18n="ios_scan.qr_alt"
+            data-i18n-attr="alt"
+          />
+          <div class="wechat-guide__actions">
+            <button
+              type="button"
+              class="btn btn-primary wechat-guide__dismiss"
+              data-ios-scan-dismiss
+              data-i18n="wechat.dismiss"
+            >
+              OK
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
       id="android-soon-dialog"
       class="wechat-guide site-dialog--centered hidden"
       role="dialog"
