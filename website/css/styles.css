@@ -158,7 +158,7 @@ a:hover {
 .site-nav {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  gap: 1.8rem;
 }
 
 .site-nav a {
@@ -667,6 +667,38 @@ body.site-dialog-open {
 .wechat-guide.site-dialog--centered {
   align-items: center;
   padding-top: 1.25rem;
+}
+
+#android-soon-dialog .wechat-guide__panel {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: calc(1.5rem + 30px);
+}
+
+#android-soon-dialog .wechat-guide__title {
+  text-align: center;
+}
+
+#android-soon-dialog .wechat-guide__actions {
+  margin-top: 0.65rem;
+}
+
+#android-soon-dialog .android-soon__content {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#wechat-guide .wechat-guide__title,
+#wechat-guide .wechat-guide__body {
+  text-align: center;
+}
+
+#wechat-guide .wechat-guide__actions .btn {
+  justify-content: center;
+  text-align: center;
 }
 
 .store-badge.is-coming-soon,
